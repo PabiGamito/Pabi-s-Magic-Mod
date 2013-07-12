@@ -62,10 +62,7 @@ public class EntityMobWizard extends EntityMob{
 	        return true;
 	    }
 
-        public int getMaxHealth() 
-        {
-                return 45;
-        }
+
         
          public String getTexture()
          {

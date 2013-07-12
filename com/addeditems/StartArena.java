@@ -5,6 +5,8 @@ import java.util.Random;
 
 import javax.swing.text.html.parser.Entity;
 
+import com.Pabi.ClientProxy;
+import com.Pabi.CommonProxy;
 import com.Pabi.pabimodbase;
 import com.PabiCodes.EntityMobWizard;
 import com.PabiCodes.util;
@@ -32,13 +34,17 @@ import net.minecraft.entity.passive.EntityPig;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ChatMessageComponent;
+import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
 public class StartArena extends Block
 {
-    public StartArena(int par1, Material par2Material) 
+    private static final EntityPlayer EnityPlayer = null;
+
+	public StartArena(int par1, Material par2Material) 
     {
 		super(par1, par2Material);
         this.setCreativeTab(CreativeTabs.tabBlock);
@@ -304,6 +310,31 @@ public class StartArena extends Block
         	        maxnum_silverfish ++;
         	        
         		}
+    			else
+    			{
+    				EntityPlayer player = new EntityPlayer(par1World, field_111026_f) {
+						
+						@Override
+						public void sendChatToPlayer(ChatMessageComponent chatmessagecomponent) {
+							// TODO Auto-generated method stub
+							
+						}
+						
+						@Override
+						public ChunkCoordinates getPlayerCoordinates() {
+							// TODO Auto-generated method stub
+							return null;
+						}
+						
+						@Override
+						public boolean canCommandSenderUseCommand(int i, String s) {
+							// TODO Auto-generated method stub
+							return false;
+						}
+					};
+					player.addChatMessage("Defuser out of electricity!");
+    			}
+    		}
     	        
     		}
     		for( int i = allcreatures.size()-1;i>=0;i--)
@@ -317,7 +348,6 @@ public class StartArena extends Block
 
     		
     		par1World.scheduleBlockUpdate(par2, par3, par4, blockID, 60);
-    	}
     }	
         	
     protected int getMaxCreatures()
