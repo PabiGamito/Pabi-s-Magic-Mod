@@ -1,5 +1,7 @@
 package com.PabiCodes;
 
+import java.util.UUID;
+
 import com.Pabi.PabiModBase;
 
 import net.minecraft.entity.Entity;
@@ -10,6 +12,7 @@ import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityVillager;
@@ -22,21 +25,28 @@ import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class EntityMobWizard extends EntityMob{
+	
+	private static final UUID field_110189_bq = UUID.fromString("49455A49-7EC5-45BA-B886-3B90B23A1718");
+
+	private static final AttributeModifier field_110190_br = (new AttributeModifier(field_110189_bq, "Attacking speed boost", 0.25D, 0)).func_111168_a(false);
+	
 	/**
 	 * Add wizard mob and its parameters (damage, speed, break doors, drops, etc)..
 	 */
         public EntityMobWizard(World par1World) 
         {
             super(par1World);
-            this.texture = "/mods/PabiModBase/textures/skin_wizard.png";
-            this.moveSpeed = 0.25F;
+            //this.texture = "/mods/PabiModBase/textures/skin_wizard.png";
+            //this.moveSpeed = 0.25F;
+            //this.tasks.addTask(4, new EntityAIWander(this, this.moveSpeed));
+            this.tasks.addTask(4, new EntityAIWander(this, 0.65D));
             this.tasks.addTask(0, new EntityAISwimming(this));
 	        this.tasks.addTask(1, new EntityAIBreakDoor(this));
-	        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, false));
+	        //this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, false));
 	        this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
-	        this.tasks.addTask(4, new EntityAIWander(this, this.moveSpeed));
+	        //this.tasks.addTask(4, new EntityAIWander(this, this.moveSpeed));
 	        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-	        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityVillager.class, 16.0F, 0, true));
+	        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityVillager.class, 0, true));
 	        this.setCurrentItemOrArmor(0, new ItemStack(PabiModBase.ThorAxe));
 	        
 	        

@@ -2,13 +2,14 @@ package com.addeditems;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.item.EntityXPOrb;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
 public class EntitySuperexppotion extends EntityThrowable
 {
-    public EntitySuperexppotion(World par1World)
+    public EntitySuperexppotion(World par1World, EntityPlayer par3EntityPlayer)
     {
         super(par1World);
     }
@@ -22,6 +23,8 @@ public class EntitySuperexppotion extends EntityThrowable
     {
         super(par1World, par2, par4, par6);
     }
+    
+    
 
     /**
      * Gets the amount of gravity to apply to the thrown entity with each tick.

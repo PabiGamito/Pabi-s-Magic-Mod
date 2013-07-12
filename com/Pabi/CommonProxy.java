@@ -11,13 +11,9 @@ public class CommonProxy
 	public static String ITEMS_PNG = "mods/PabiModBase/textures/items.png";
 	public void registerRenderers()
 	{
-		MinecraftForgeClient.preloadTexture("mods/PabiModBase/textures/items/super_2.png");
-		MinecraftForgeClient.preloadTexture("mods/PabiModBase/textures/items/super_1.png");
+		//MinecraftForgeClient.preloadTexture("mods/PabiModBase/textures/items/super_2.png");
+		//MinecraftForgeClient.preloadTexture("mods/PabiModBase/textures/items/super_1.png");
 
-	}
-	public void RegisterRenders() {
-		// TODO Auto-generated method stub
-		
 	}
 	public int addArmor(String string){
 		return 0;

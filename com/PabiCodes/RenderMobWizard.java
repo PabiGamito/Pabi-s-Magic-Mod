@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.entity.RenderBiped;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.util.ResourceLocation;
 
 public class RenderMobWizard extends RenderBiped {
 
@@ -36,4 +37,19 @@ public void doRender(Entity par1Entity, double par2, double par4, double par6, f
         renderWizard((EntityMobWizard)par1Entity, par2, par4, par6, par8, par9);
     }
 
+	
+
+/*
+	private static final ResourceLocation field_110888_a = new ResourceLocation("PabiModBase:textures/skin_wizard.png");
+	private static final ResourceLocation field_110887_f = new ResourceLocation("PabiModBase:textures/skin_wizard.png");
+	
+	protected ResourceLocation func_110886_a(EntityMobWizard par1EntityMobWizard)
+	{
+	return field_110887_f;
+	}
+	protected ResourceLocation func_110775_a(Entity par1Entity)
+	{
+	return this.func_110886_a((EntityMobWizard) par1Entity);
+	}
+*/
 }

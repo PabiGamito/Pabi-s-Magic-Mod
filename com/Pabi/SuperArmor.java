@@ -6,13 +6,13 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.java.games.input.Keyboard;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.IArmorTextureProvider;
 
-public class SuperArmor extends ItemArmor implements IArmorTextureProvider{
+public class SuperArmor extends ItemArmor{ //implements IArmorTextureProvider{
 
 	private Object iconIndex;
 
@@ -25,16 +25,17 @@ public class SuperArmor extends ItemArmor implements IArmorTextureProvider{
 	/**
 	 * 	To Add Armor Texture to Player when worn.
 	 */
-	public String getArmorTextureFile(ItemStack itemstack)
-	{
-		if(itemstack.itemID == PabiModBase.helmetSuper.itemID || itemstack.itemID == PabiModBase.chestplateSuper.itemID || itemstack.itemID == PabiModBase.bootsSuper.itemID)
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
 		{
-			return "/mods/PabiModBase/textures/items/super_1.png";
-		}
-		if(itemstack.itemID == PabiModBase.legsSuper.itemID)
+			if(itemID == PabiModBase.helmetSuper.itemID || itemID == PabiModBase.chestplateSuper.itemID || itemID == PabiModBase.bootsSuper.itemID)
 		{
-			return "/mods/PabiModBase/textures/items/super_2.png";
+				return "PabiModBase:textures/items/super_1.png";
 		}
+			if(itemID == PabiModBase.legsSuper.itemID)
+		{
+				return "PabiModBase:textures/items/super_2.png";
+		}
+
 		
 		else return null;
 	}

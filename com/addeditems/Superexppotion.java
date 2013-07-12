@@ -2,6 +2,9 @@ package com.addeditems;
 
 import com.addeditems.EntitySuperexppotion;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
@@ -23,9 +26,15 @@ public class Superexppotion extends ItemExpBottle {
 
 	public Superexppotion(int par1, EnumToolMaterial par2EnumToolMaterial) {
 		super(par1);
-		this.setCreativeTab(CreativeTabs.tabBrewing);
+		this.setCreativeTab(CreativeTabs.tabMisc);
 	}
-
+	
+    @SideOnly(Side.CLIENT)
+    public boolean hasEffect(ItemStack par1ItemStack)
+    {
+        return true;
+    }
+	
 	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer) {
         if (!par3EntityPlayer.capabilities.isCreativeMode) {
             --par1ItemStack.stackSize;

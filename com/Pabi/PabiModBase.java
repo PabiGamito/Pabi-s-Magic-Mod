@@ -5,10 +5,6 @@ import com.PabiCodes.EntityMobWizard;
 import com.PabiCodes.util;
 import com.addeditems.MobArenaPart;
 
-import scala.languageFeature;
-
-
-
 import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
@@ -239,7 +235,7 @@ public class PabiModBase
 		GameRegisters();
 		LanguageRegisters();
 		
-		proxy.RegisterRenders();
+		proxy.registerRenderers();
 		
 		/**
 		 * Register blocks for them to be usable in game.
