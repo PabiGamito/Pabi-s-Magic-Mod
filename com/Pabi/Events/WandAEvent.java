@@ -20,6 +20,12 @@ public class WandAEvent implements ICraftingHandler {
 			player.addStat(pabimodbase.WandA, 1);
 		}
 	}
+
+	@Override
+	public void onSmelting(EntityPlayer player, ItemStack item) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	/*public void onPickup(EntityPlayer player, ItemStack item,
 			IInventory craftMatrix) {
@@ -28,12 +34,5 @@ public class WandAEvent implements ICraftingHandler {
 			player.addStat(PabiModBase.WandA, 1);
 		}
 	}*/
-	
-
-	@Override
-	public void onSmelting(EntityPlayer player, ItemStack item) {
-		// TODO Auto-generated method stub
-
-	}
 
 }

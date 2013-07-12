@@ -1,6 +1,8 @@
 package com.Pabi;
 
 import com.Pabi.Events.SuperBowAEvent;
+import com.Pabi.Events.SuperIngotAEvent;
+import com.Pabi.Events.WandAEvent;
 import com.PabiCodes.EntityMobWizard;
 import com.PabiCodes.util;
 import com.addeditems.MobArenaPart;
@@ -148,9 +150,10 @@ public class pabimodbase
 	
 	
 	//New add Custom Achievements and Achievement pages.
-	public static final Achievement SuperBowA = new Achievement(6650, "SuperBowA", 0, 0, SuperBow, AchievementList.buildWorkBench).setIndependent().registerAchievement();
-	public static final Achievement WandA = new Achievement(6651, "WandA", 0, 0, Wand, AchievementList.buildWorkBench).setIndependent().registerAchievement();
-	public static AchievementPage page1 = new AchievementPage("Magic", SuperBowA);
+	public static final Achievement SuperBowA = new Achievement(6650, "SuperBowA", 0, 0, SuperBow, AchievementList.buildWorkBench).registerAchievement().setIndependent();
+	public static final Achievement WandA = new Achievement(6651, "WandA", 2, 0, Wand, AchievementList.buildWorkBench).registerAchievement();
+	public static final Achievement SuperIngotA = new Achievement(6652, "SuperIngotA", 3, 2, SuperIngot, AchievementList.buildWorkBench).registerAchievement();
+	public static AchievementPage page1 = new AchievementPage("Magic", AchievementList.openInventory ,SuperBowA, WandA, SuperIngotA);
 	
 	@PreInit
 	public void preInit(FMLPreInitializationEvent event)
@@ -187,6 +190,8 @@ public class pabimodbase
         LanguageRegistry.instance().addStringLocalization("achievement.SuperBowA.desc", "en_US", "Start snipping everything!");
         LanguageRegistry.instance().addStringLocalization("achievement.WandA", "en_US", "Wand");
         LanguageRegistry.instance().addStringLocalization("achievement.WandA.desc", "en_US", "Start your wizard carear here!");
+        LanguageRegistry.instance().addStringLocalization("achievement.SuperIngotA", "en_US", "Super Ore");
+        LanguageRegistry.instance().addStringLocalization("achievement.SuperIngotA.desc", "en_US", "Start crafting super stuff!");
 		
         LanguageRegistry.instance().addStringLocalization("entity.PabiModBase.Wizard.name", "Wizard");
         
@@ -252,6 +257,8 @@ public class pabimodbase
 		 */
 		GameRegistry.registerCraftingHandler(new SuperBowAEvent());
 		AchievementPage.registerAchievementPage(page1);
+		GameRegistry.registerCraftingHandler(new WandAEvent());
+		GameRegistry.registerCraftingHandler(new SuperIngotAEvent());
 		TickRegistry.registerTickHandler(new CommonTickHandler(), Side.SERVER);
 		
 		/**
