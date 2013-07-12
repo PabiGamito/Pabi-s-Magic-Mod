@@ -86,7 +86,7 @@ public class SuperArmor extends ItemArmor{ //implements IArmorTextureProvider{
     if (minecraft.thePlayer.inventory.armorItemInSlot(2) != null)
         {
             ItemStack itemstack = minecraft.thePlayer.inventory.armorItemInSlot(2);
-            if (itemstack.itemID == PabiModBase.chestplateSuper.itemID)
+            if (itemstack.itemID == pabimodbase.chestplateSuper.itemID)
             {
                 if (minecraft.currentScreen == null && (Keyboard.isKeyDown(Keyboard.KEY_Z))//Keyboard.isKeyDown(minecraft.gameSettings.keyBindJump.keyCode))
                 {
@@ -126,12 +126,12 @@ public class SuperArmor extends ItemArmor{ //implements IArmorTextureProvider{
         return true;
     }
     
-    /*public boolean onTickInGame(float f, Minecraft minecraft)
+    public boolean onTickInGame(float f, Minecraft minecraft)
     {
     if (minecraft.thePlayer.inventory.armorItemInSlot(0) != null)
         {
          ItemStack itemstack = minecraft.thePlayer.inventory.armorItemInSlot(0);
-            if (itemstack.itemID == PabiModBase.bootsSuper.itemID)
+            if (itemstack.itemID == pabimodbase.bootsSuper.itemID)
             {
              minecraft.thePlayer.speedOnGround = 0.41999998688697815F;
             }
