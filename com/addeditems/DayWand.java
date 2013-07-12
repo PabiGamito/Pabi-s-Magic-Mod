@@ -25,7 +25,7 @@ public class DayWand extends ItemSword {
 	}
 
 	public void registerIcons(IconRegister iconReg) {
-		itemIcon = iconReg.registerIcon("PabiModBase:DayWand");
+		itemIcon = iconReg.registerIcon("pabimodbase:DayWand");
 	}
 	
 	/**

@@ -2,7 +2,7 @@ package com.addeditems;
 
 import java.util.Random;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -20,6 +20,6 @@ public class StartArenaGlowing extends Block {
         this.setBlockUnbreakable();
 	}
         public void registerIcons(IconRegister iconReg) {
-        blockIcon = iconReg.registerIcon("PabiModBase:AreanaStartGlowing"); 
+        blockIcon = iconReg.registerIcon("pabimodbase:AreanaStartGlowing"); 
     }
 }

@@ -32,7 +32,7 @@ public void playerTick(EntityPlayer player)
 if (player.getCurrentItemOrArmor(2) != null)
 {
 	ItemStack itemstack = player.inventory.armorItemInSlot(2);
-if (itemstack.itemID == PabiModBase.chestplateSuper.itemID && player.motionY < 0.0D)
+if (itemstack.itemID == pabimodbase.chestplateSuper.itemID && player.motionY < 0.0D)
 {
     player.motionY /= 0.2000000238418579D;
     player.fallDistance = 0.0F;

@@ -14,6 +14,6 @@ public class magic extends ItemFood {
         
         
     public void registerIcons(IconRegister iconReg) {
-        itemIcon = iconReg.registerIcon("PabiModBase:magicplant");
+        itemIcon = iconReg.registerIcon("pabimodbase:magicplant");
     }
 }

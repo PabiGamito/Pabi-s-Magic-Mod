@@ -14,7 +14,7 @@ public class SwordDirt extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:SwordDirt");
+        itemIcon = iconReg.registerIcon("pabimodbase:SwordDirt");
     }
     public int getDamageVsEntity (Entity par1Entity)
     {

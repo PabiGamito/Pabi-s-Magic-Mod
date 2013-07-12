@@ -5,7 +5,7 @@ import java.util.Random;
 
 import javax.swing.text.html.parser.Entity;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 import com.PabiCodes.EntityMobWizard;
 import com.PabiCodes.util;
 
@@ -47,7 +47,7 @@ public class StartArena extends Block
 	}
     public void registerIcons(IconRegister iconReg) 
     {
-        blockIcon = iconReg.registerIcon("PabiModBase:ArenaStart"); 
+        blockIcon = iconReg.registerIcon("pabimodbase:ArenaStart"); 
     }
     
     /*public void onBlockClicked(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer)
@@ -76,7 +76,7 @@ public class StartArena extends Block
         num_boss = 0;
         boss_health = 20;
         
-        //par1World.setBlock(par2, par3, par4, PabiModBase.StartArenaGlowing.blockID);
+        //par1World.setBlock(par2, par3, par4, pabimodbase.StartArenaGlowing.blockID);
         
     	par1World.scheduleBlockUpdate(par2, par3, par4, blockID, 1);
         return false;
@@ -249,7 +249,7 @@ public class StartArena extends Block
     				Vec3 vec = util.placeInRandomDir(par2, par3, par4, 5);
     				wizard.setPosition(vec.xCoord, vec.yCoord, vec.zCoord);
     				par1World.spawnEntityInWorld(wizard);
-    				wizard.setCurrentItemOrArmor(0, new ItemStack(PabiModBase.Wand));
+    				wizard.setCurrentItemOrArmor(0, new ItemStack(pabimodbase.Wand));
     				num_wizard++;
     				allcreatures.add(wizard);
     			}

@@ -27,13 +27,13 @@ public class SuperArmor extends ItemArmor{ //implements IArmorTextureProvider{
 	 */
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer)
 		{
-			if(itemID == PabiModBase.helmetSuper.itemID || itemID == PabiModBase.chestplateSuper.itemID || itemID == PabiModBase.bootsSuper.itemID)
+			if(itemID == pabimodbase.helmetSuper.itemID || itemID == pabimodbase.chestplateSuper.itemID || itemID == pabimodbase.bootsSuper.itemID)
 		{
-				return "PabiModBase:textures/items/super_1.png";
+				return "pabimodbase:textures/items/super_1.png";
 		}
-			if(itemID == PabiModBase.legsSuper.itemID)
+			if(itemID == pabimodbase.legsSuper.itemID)
 		{
-				return "PabiModBase:textures/items/super_2.png";
+				return "pabimodbase:textures/items/super_2.png";
 		}
 
 		
@@ -44,19 +44,19 @@ public class SuperArmor extends ItemArmor{ //implements IArmorTextureProvider{
 	*/
     public void registerIcons(IconRegister iconReg) 
     {
-		if(itemID == PabiModBase.bootsSuper.itemID)
+		if(itemID == pabimodbase.bootsSuper.itemID)
 		{
 			itemIcon = iconReg.registerIcon("PabiModBase:bootsSuper");
 		}
-		else if(itemID == PabiModBase.legsSuper.itemID)
+		else if(itemID == pabimodbase.legsSuper.itemID)
 		{
 			itemIcon = iconReg.registerIcon("PabiModBase:leggingsSuper");
 		}
-		else if(itemID == PabiModBase.chestplateSuper.itemID)
+		else if(itemID == pabimodbase.chestplateSuper.itemID)
 		{
 			itemIcon = iconReg.registerIcon("PabiModBase:chestplateSuper");
 		}
-		else if(itemID == PabiModBase.helmetSuper.itemID)
+		else if(itemID == pabimodbase.helmetSuper.itemID)
 		{
 			itemIcon = iconReg.registerIcon("PabiModBase:helmetSuper");
 		}
@@ -70,7 +70,7 @@ public class SuperArmor extends ItemArmor{ //implements IArmorTextureProvider{
     if (par2.inventory.armorItemInSlot(2) != null) //Change two for the desired armor placement (see above)
         {
             ItemStack itemstack = par2.inventory.armorItemInSlot(2);
-            if (itemstack.itemID == PabiModBase.chestplateSuper.itemID && par2.motionY < 0.0D)
+            if (itemstack.itemID == pabimodbase.chestplateSuper.itemID && par2.motionY < 0.0D)
             {
                 par2.motionY /= 0.2000000238418579D;
                 par2.fallDistance = 0.0F;

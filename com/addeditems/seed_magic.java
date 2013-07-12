@@ -11,6 +11,6 @@ public class seed_magic extends ItemSeeds {
                 this.setCreativeTab(CreativeTabs.tabMaterials);
         }
     public void registerIcons(IconRegister iconReg) {
-        itemIcon = iconReg.registerIcon("PabiModBase:seeds_magic");
+        itemIcon = iconReg.registerIcon("pabimodbase:seeds_magic");
     }
 }

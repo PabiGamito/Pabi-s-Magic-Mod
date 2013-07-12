@@ -71,7 +71,7 @@ public class SuperSoup extends ItemFood
     
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:SuperSoup");
+        itemIcon = iconReg.registerIcon("pabimodbase:SuperSoup");
     }
 
 }

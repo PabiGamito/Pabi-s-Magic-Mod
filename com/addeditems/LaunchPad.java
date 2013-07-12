@@ -26,8 +26,8 @@ public class LaunchPad extends Block
 	}
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon("PabiModBase:JumpPad_Side");
-        this.field_94393_a = par1IconRegister.registerIcon("PabiModBase:JumpPad_Top");
+        this.blockIcon = par1IconRegister.registerIcon("pabimodbase:JumpPad_Side");
+        this.field_94393_a = par1IconRegister.registerIcon("pabimodbase:JumpPad_Top");
         this.field_94392_b = par1IconRegister.registerIcon("tnt_bottom");
     }
     public Icon getIcon(int par1, int par2)

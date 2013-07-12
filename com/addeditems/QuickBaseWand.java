@@ -30,7 +30,7 @@ public class QuickBaseWand extends ItemSword {
         }
 
         public void registerIcons(IconRegister iconReg) {
-                itemIcon = iconReg.registerIcon("PabiModBase:QuickBaseWand");
+                itemIcon = iconReg.registerIcon("pabimodbase:QuickBaseWand");
         }
         
         /**

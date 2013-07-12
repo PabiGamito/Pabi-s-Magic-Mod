@@ -9,7 +9,7 @@ import static net.minecraftforge.common.EnumPlantType.Water;
 
 import java.util.Random;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
@@ -36,7 +36,7 @@ public class magic_crop extends BlockFlower
 	
     public void registerIcons(IconRegister iconReg) 
     {
-        blockIcon = iconReg.registerIcon("PabiModBase:magic_crop");
+        blockIcon = iconReg.registerIcon("pabimodbase:magic_crop");
     }
 	            
 	public AxisAlignedBB getCollisionBoundingBoxFromPool(World world, int x, int y, int z)
@@ -84,7 +84,7 @@ public class magic_crop extends BlockFlower
 	public boolean canBlockStay(World world, int x, int y, int z)
 	{
 		Block soil = blocksList[world.getBlockId(x, y-1, z)];
-		return (world.getFullBlockLightValue(x, y, z) >= 8 || world.canBlockSeeTheSky(x, y, z)) && (soil != null && soil.canSustainPlant(world, x, y-1, z, ForgeDirection.UP,PabiModBase.seeds_magic)); 
+		return (world.getFullBlockLightValue(x, y, z) >= 8 || world.canBlockSeeTheSky(x, y, z)) && (soil != null && soil.canSustainPlant(world, x, y-1, z, ForgeDirection.UP,pabimodbase.seeds_magic)); 
 	            
 	
 	}
@@ -94,9 +94,9 @@ public class magic_crop extends BlockFlower
 		switch (metadata)
 		{
 		case 0:
-		    return PabiModBase.seeds_magic.itemID;
+		    return pabimodbase.seeds_magic.itemID;
 		case 1:
-		    return PabiModBase.magicmelon.itemID;
+		    return pabimodbase.magicmelon.itemID;
 		default :
 		    return -1;
 		    
@@ -105,7 +105,7 @@ public class magic_crop extends BlockFlower
 
 	public int idPicked(World world, int x, int y, int z)
 	{
-		return PabiModBase.seeds_magic.itemID;
+		return pabimodbase.seeds_magic.itemID;
 	}
 	
 	@Override

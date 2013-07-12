@@ -25,7 +25,7 @@ public class FlyWand extends ItemSword {
 	}
 
 	public void registerIcons(IconRegister iconReg) {
-		itemIcon = iconReg.registerIcon("PabiModBase:FlyWand");
+		itemIcon = iconReg.registerIcon("pabimodbase:FlyWand");
 	}
 	
 	/**

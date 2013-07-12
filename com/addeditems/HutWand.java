@@ -30,7 +30,7 @@ public class HutWand extends ItemSword {
         }
 
         public void registerIcons(IconRegister iconReg) {
-                itemIcon = iconReg.registerIcon("PabiModBase:QuickHutWand");
+                itemIcon = iconReg.registerIcon("pabimodbase:QuickHutWand");
         }
         
         /**

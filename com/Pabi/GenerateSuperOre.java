@@ -50,7 +50,7 @@ public class GenerateSuperOre implements IWorldGenerator{
     	int yCoord = random.nextInt(28);
     	int zCoord = chunkZ + random.nextInt(16); 
         
-    	(new WorldGenMinable(PabiModBase.SuperOre.blockID, 10)).generate(world, random, xCoord, yCoord, zCoord);
+    	(new WorldGenMinable(pabimodbase.SuperOre.blockID, 10)).generate(world, random, xCoord, yCoord, zCoord);
     }
   }
   

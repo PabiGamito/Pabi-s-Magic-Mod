@@ -13,6 +13,6 @@ public class HutPart extends Item {
 	}
 
 	public void registerIcons(IconRegister iconReg) {
-		itemIcon = iconReg.registerIcon("PabiModBase:HutPart");
+		itemIcon = iconReg.registerIcon("pabimodbase:HutPart");
 	}
 }

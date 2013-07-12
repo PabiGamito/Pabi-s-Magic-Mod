@@ -1,6 +1,6 @@
 package com.addeditems;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -26,7 +26,7 @@ public class SuperBow extends ItemBow {
 	}
 
 	public void registerIcons(IconRegister iconReg) {
-		itemIcon = iconReg.registerIcon("PabiModBase:SuperBow");
+		itemIcon = iconReg.registerIcon("pabimodbase:SuperBow");
 	}
 
 	public int getDamageVsEntity(Entity par1Entity) {
@@ -55,7 +55,7 @@ public class SuperBow extends ItemBow {
 
 		/*if (flag
 				|| par3EntityPlayer.inventory
-						.hasItem(PabiModBase.SuperArrow.itemID)) {
+						.hasItem(pabimodbase.SuperArrow.itemID)) {
 			float f = (float) j / 20.0F;
 			f = (f * f + f * 2.0F) / 3.0F;
 

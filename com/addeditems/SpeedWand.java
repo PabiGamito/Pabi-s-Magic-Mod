@@ -24,7 +24,7 @@ public class SpeedWand extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:SpeedWand");
+        itemIcon = iconReg.registerIcon("pabimodbase:SpeedWand");
     }
     	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
     {

@@ -2,7 +2,7 @@ package com.addeditems;
 
 import java.util.Random;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -22,9 +22,9 @@ public class magicplant extends Block
 	}
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon("PabiModBase:magicplant_side");
-        this.field_94393_a = par1IconRegister.registerIcon("PabiModBase:magicplant_top");
-        this.field_94393_b = par1IconRegister.registerIcon("PabiModBase:magicplant_top");
+        this.blockIcon = par1IconRegister.registerIcon("pabimodbase:magicplant_side");
+        this.field_94393_a = par1IconRegister.registerIcon("pabimodbase:magicplant_top");
+        this.field_94393_b = par1IconRegister.registerIcon("pabimodbase:magicplant_top");
     }
     public Icon getIcon(int par1, int par2)
     {
@@ -32,6 +32,6 @@ public class magicplant extends Block
     }
     public int idDropped(int i, Random r, int j)
     {
-        return PabiModBase.magicmelon.itemID;
+        return pabimodbase.magicmelon.itemID;
     }
 }

@@ -22,7 +22,7 @@ public class TnTWand extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:TnTWand");
+        itemIcon = iconReg.registerIcon("pabimodbase:TnTWand");
     }
     public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
 	{

@@ -15,7 +15,7 @@ public class Wand extends Item {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:Wand");
+        itemIcon = iconReg.registerIcon("pabimodbase:Wand");
     }
 
 }

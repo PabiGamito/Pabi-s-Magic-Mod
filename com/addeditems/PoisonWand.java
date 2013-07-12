@@ -27,7 +27,7 @@ public class PoisonWand extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:PoisonWand");
+        itemIcon = iconReg.registerIcon("pabimodbase:PoisonWand");
     }
     	
     	/**

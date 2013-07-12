@@ -1,6 +1,6 @@
 package com.Pabi.Events;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -15,9 +15,9 @@ public class SuperBowAEvent implements ICraftingHandler {
 	@Override
 	public void onCrafting(EntityPlayer player, ItemStack item,
 			IInventory craftMatrix) {
-		if(item.itemID == PabiModBase.SuperBow.itemID)
+		if(item.itemID == pabimodbase.SuperBow.itemID)
 		{
-			player.addStat(PabiModBase.SuperBowA, 1);
+			player.addStat(pabimodbase.SuperBowA, 1);
 		}
 	}
 

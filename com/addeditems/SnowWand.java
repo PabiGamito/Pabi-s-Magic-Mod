@@ -21,7 +21,7 @@ public class SnowWand extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:SnowWand");
+        itemIcon = iconReg.registerIcon("pabimodbase:SnowWand");
     }
     
     /**

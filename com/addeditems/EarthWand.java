@@ -20,7 +20,7 @@ public class EarthWand extends ItemHoe {
                 this.setCreativeTab(CreativeTabs.tabTools);
         }
     public void registerIcons(IconRegister iconReg) {
-        itemIcon = iconReg.registerIcon("PabiModBase:EarthWand");
+        itemIcon = iconReg.registerIcon("pabimodbase:EarthWand");
     }
     
     /**

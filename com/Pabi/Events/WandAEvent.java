@@ -1,6 +1,6 @@
 package com.Pabi.Events;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
@@ -15,9 +15,9 @@ public class WandAEvent implements ICraftingHandler {
 	@Override
 	public void onCrafting(EntityPlayer player, ItemStack item,
 			IInventory craftMatrix) {
-		if(item.itemID == PabiModBase.Wand.itemID)
+		if(item.itemID == pabimodbase.Wand.itemID)
 		{
-			player.addStat(PabiModBase.WandA, 1);
+			player.addStat(pabimodbase.WandA, 1);
 		}
 	}
 	

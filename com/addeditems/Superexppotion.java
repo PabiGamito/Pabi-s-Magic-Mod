@@ -51,6 +51,6 @@ public class Superexppotion extends ItemExpBottle {
 	
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:Superexpbottle");
+        itemIcon = iconReg.registerIcon("pabimodbase:Superexpbottle");
     }
 }

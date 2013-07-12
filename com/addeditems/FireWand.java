@@ -22,7 +22,7 @@ public class FireWand extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:FireWand");
+        itemIcon = iconReg.registerIcon("pabimodbase:FireWand");
     }
     
     /**

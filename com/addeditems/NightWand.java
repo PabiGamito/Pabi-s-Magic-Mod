@@ -25,7 +25,7 @@ public class NightWand extends ItemSword {
 	}
 
 	public void registerIcons(IconRegister iconReg) {
-		itemIcon = iconReg.registerIcon("PabiModBase:NightWand");
+		itemIcon = iconReg.registerIcon("pabimodbase:NightWand");
 	}
 	
 	/**

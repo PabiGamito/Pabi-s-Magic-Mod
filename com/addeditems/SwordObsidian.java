@@ -14,7 +14,7 @@ public class SwordObsidian extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:SwordObsidian");
+        itemIcon = iconReg.registerIcon("pabimodbase:SwordObsidian");
        }
     public int getDamageVsEntity (Entity par1Entity)
     {

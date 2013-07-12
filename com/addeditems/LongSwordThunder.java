@@ -23,7 +23,7 @@ public class LongSwordThunder extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:LongSwordThunder");
+        itemIcon = iconReg.registerIcon("pabimodbase:LongSwordThunder");
        }
     public int getDamageVsEntity (Entity par1Entity)
     {

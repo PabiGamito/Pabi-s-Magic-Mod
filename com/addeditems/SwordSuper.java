@@ -14,7 +14,7 @@ public class SwordSuper extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:SwordSuper");
+        itemIcon = iconReg.registerIcon("pabimodbase:SwordSuper");
     }
     public int getDamageVsEntity (Entity par1Entity)
     {

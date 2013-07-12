@@ -38,7 +38,7 @@ public class EnderWand extends ItemSword {
         
         public void registerIcons(IconRegister iconReg) 
         {
-                itemIcon = iconReg.registerIcon("PabiModBase:EnderWand");
+                itemIcon = iconReg.registerIcon("pabimodbase:EnderWand");
         }
 
 }

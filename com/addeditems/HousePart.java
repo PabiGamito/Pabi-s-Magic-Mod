@@ -13,6 +13,6 @@ public class HousePart extends Item {
 	}
 
 	public void registerIcons(IconRegister iconReg) {
-		itemIcon = iconReg.registerIcon("PabiModBase:BasePart");
+		itemIcon = iconReg.registerIcon("pabimodbase:BasePart");
 	}
 }

@@ -14,7 +14,7 @@ public class SuperIngot extends Item{
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:SuperIngot");
+        itemIcon = iconReg.registerIcon("pabimodbase:SuperIngot");
         
     }
     

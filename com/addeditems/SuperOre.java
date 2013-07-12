@@ -2,7 +2,7 @@ package com.addeditems;
 
 import java.util.Random;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -23,11 +23,11 @@ public class SuperOre extends BlockOre {
     
     public int idDropped(int i, Random r, int j)
     {
-        return PabiModBase.SuperOre.blockID;
+        return pabimodbase.SuperOre.blockID;
     }
 
         public void registerIcons(IconRegister iconReg) {
-        blockIcon = iconReg.registerIcon("PabiModBase:SuperOre"); 
+        blockIcon = iconReg.registerIcon("pabimodbase:SuperOre"); 
     }
         public int quantityDropped(Random r){
         	return 1;

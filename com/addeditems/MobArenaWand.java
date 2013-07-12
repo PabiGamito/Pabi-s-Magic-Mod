@@ -3,7 +3,7 @@ package com.addeditems;
 import java.util.List;
 import java.util.Random;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -32,7 +32,7 @@ public class MobArenaWand extends ItemSword {
         }
 
         public void registerIcons(IconRegister iconReg) {
-                itemIcon = iconReg.registerIcon("PabiModBase:MobArenaWand");
+                itemIcon = iconReg.registerIcon("pabimodbase:MobArenaWand");
         }
 
         public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World,EntityPlayer par3EntityPlayer) 
@@ -198,7 +198,7 @@ public class MobArenaWand extends ItemSword {
                                 par2World.setBlock((int)coord.blockX+18, (int)coord.blockY+16,(int) coord.blockZ+19, Block.lavaMoving.blockID);
                                 par2World.setBlock((int)coord.blockX+19, (int)coord.blockY+16,(int) coord.blockZ+19, Block.lavaMoving.blockID);
                                 
-                                par2World.setBlock((int)coord.blockX+10, (int)coord.blockY+17,(int) coord.blockZ+10, PabiModBase.StartArena.blockID);
+                                par2World.setBlock((int)coord.blockX+10, (int)coord.blockY+17,(int) coord.blockZ+10, pabimodbase.StartArena.blockID);
                                 
                                 par2World.setBlock((int)coord.blockX-5, (int)coord.blockY-6,(int) coord.blockZ+10, Block.cobblestone.blockID);
                                 par2World.setBlock((int)coord.blockX-5, (int)coord.blockY-5,(int) coord.blockZ+10, Block.cobblestone.blockID);
@@ -224,7 +224,7 @@ public class MobArenaWand extends ItemSword {
                                 par2World.setBlock((int)coord.blockX-5, (int)coord.blockY+15,(int) coord.blockZ+10, Block.cobblestone.blockID);
                                 par2World.setBlock((int)coord.blockX-5, (int)coord.blockY+16,(int) coord.blockZ+10, Block.cobblestone.blockID);
                                 
-                                par2World.setBlock((int)coord.blockX-4, (int)coord.blockY-6,(int) coord.blockZ+10, PabiModBase.LaunchPad.blockID);
+                                par2World.setBlock((int)coord.blockX-4, (int)coord.blockY-6,(int) coord.blockZ+10, pabimodbase.LaunchPad.blockID);
                                 par2World.setBlockToAir((int)coord.blockX-4, (int)coord.blockY-5,(int) coord.blockZ+10);
                                 par2World.setBlockToAir((int)coord.blockX-4, (int)coord.blockY-4,(int) coord.blockZ+10);
                                 par2World.setBlockToAir((int)coord.blockX-4, (int)coord.blockY-3,(int) coord.blockZ+10);

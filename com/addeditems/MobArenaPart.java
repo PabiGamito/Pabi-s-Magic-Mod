@@ -13,6 +13,6 @@ public class MobArenaPart extends Item {
 	}
 
 	public void registerIcons(IconRegister iconReg) {
-		itemIcon = iconReg.registerIcon("PabiModBase:MobArenaPart");
+		itemIcon = iconReg.registerIcon("pabimodbase:MobArenaPart");
 	}
 }

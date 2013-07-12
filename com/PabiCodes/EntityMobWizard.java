@@ -2,7 +2,7 @@ package com.PabiCodes;
 
 import java.util.UUID;
 
-import com.Pabi.PabiModBase;
+import com.Pabi.pabimodbase;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -47,7 +47,7 @@ public class EntityMobWizard extends EntityMob{
 	        //this.tasks.addTask(4, new EntityAIWander(this, this.moveSpeed));
 	        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
 	        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityVillager.class, 0, true));
-	        this.setCurrentItemOrArmor(0, new ItemStack(PabiModBase.ThorAxe));
+	        this.setCurrentItemOrArmor(0, new ItemStack(pabimodbase.ThorAxe));
 	        
 	        
         }
@@ -69,7 +69,7 @@ public class EntityMobWizard extends EntityMob{
         
          public String getTexture()
          {
-        	 return "/mods/PabiModBase/textures/skin_wizard.png";
+        	 return "/mods/pabimodbase/textures/skin_wizard.png";
          }
 
         public int getTotalArmorValue()
@@ -99,7 +99,7 @@ public class EntityMobWizard extends EntityMob{
         
         protected int getDropItemId()
         {
-            return PabiModBase.Wand.itemID;
+            return pabimodbase.Wand.itemID;
         }
             
         protected void dropRareDrop(int par1)
@@ -107,19 +107,19 @@ public class EntityMobWizard extends EntityMob{
         	switch(this.rand.nextInt(5))
         			{
         		case 0:
-        			this.dropItem(PabiModBase.FireWand.itemID, 1);
+        			this.dropItem(pabimodbase.FireWand.itemID, 1);
         			break;
         		case 1:
-        			this.dropItem(PabiModBase.FlyWand.itemID, 1);
+        			this.dropItem(pabimodbase.FlyWand.itemID, 1);
         			break;
         		case 2:
-        			this.dropItem(PabiModBase.TnTWand.itemID, 1);
+        			this.dropItem(pabimodbase.TnTWand.itemID, 1);
         			break;
         		case 3:
-        			this.dropItem(PabiModBase.SpeedWand.itemID, 1);
+        			this.dropItem(pabimodbase.SpeedWand.itemID, 1);
         			break;
         		case 4:
-        			this.dropItem(PabiModBase.PoisonWand.itemID, 1);
+        			this.dropItem(pabimodbase.PoisonWand.itemID, 1);
         			break;
         			}
         }

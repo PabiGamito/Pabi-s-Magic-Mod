@@ -44,11 +44,11 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 @Mod(modid = "PabiModBase", name = "PabiModBase", version = "0.0.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-public class PabiModBase 
+public class pabimodbase 
 {
 	
 	@Instance("PabiModBase")
-	public static PabiModBase instance;
+	public static pabimodbase instance;
 	
 	@SidedProxy(clientSide="com.Pabi.ClientProxy", serverSide="com.Pabi.CommonProxy")
 	public static CommonProxy proxy;

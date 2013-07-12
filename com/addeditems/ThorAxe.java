@@ -28,7 +28,7 @@ public class ThorAxe extends ItemAxe {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:ThorAxe");
+        itemIcon = iconReg.registerIcon("pabimodbase:ThorAxe");
        }
     public int getDamageVsEntity (Entity par1Entity)
     {

@@ -27,7 +27,7 @@ public class HealWand extends ItemSword {
 	}
     public void registerIcons(IconRegister iconReg)
     {
-        itemIcon = iconReg.registerIcon("PabiModBase:HealWand");
+        itemIcon = iconReg.registerIcon("pabimodbase:HealWand");
     }
     
     /**
