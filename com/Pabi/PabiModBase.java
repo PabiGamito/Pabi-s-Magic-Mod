@@ -83,7 +83,7 @@ public class pabimodbase
 	
 	public static Item SuperBow = new com.addeditems.SuperBow(607, null).setUnlocalizedName("SuperBow");
 	
-	public static Item Superexppotion = new com.addeditems.Superexppotion(609, null).setUnlocalizedName("Superexppotion");
+	public static Item Superexppotion = new com.addeditems.Superexppotion(609).setUnlocalizedName("Superexppotion");
 	
 	public static Block SuperOre = new com.addeditems.SuperOre(610).setLightValue(0.0001F).setHardness(2.5F).setUnlocalizedName("Super Ore");
 	
