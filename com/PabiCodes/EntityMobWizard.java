@@ -5,14 +5,21 @@ import java.util.UUID;
 import com.Pabi.pabimodbase;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.EntityLivingData;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
 import net.minecraft.entity.ai.EntityAIBreakDoor;
 import net.minecraft.entity.ai.EntityAIHurtByTarget;
+import net.minecraft.entity.ai.EntityAILookIdle;
+import net.minecraft.entity.ai.EntityAIMoveThroughVillage;
+import net.minecraft.entity.ai.EntityAIMoveTowardsRestriction;
 import net.minecraft.entity.ai.EntityAINearestAttackableTarget;
 import net.minecraft.entity.ai.EntityAISwimming;
 import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
+import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.entity.ai.attributes.RangedAttribute;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.entity.passive.EntityVillager;
@@ -21,36 +28,38 @@ import net.minecraft.entity.projectile.EntityPotion;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
 public class EntityMobWizard extends EntityMob{
 	
-	private static final UUID field_110189_bq = UUID.fromString("49455A49-7EC5-45BA-B886-3B90B23A1718");
-
-	private static final AttributeModifier field_110190_br = (new AttributeModifier(field_110189_bq, "Attacking speed boost", 0.25D, 0)).func_111168_a(false);
+	protected static final Attribute field_110186_bp = (new RangedAttribute("zombie.spawnReinforcements", 0.0D, 0.0D, 1.0D)).func_111117_a("Spawn Reinforcements Chance");
+	//private static final UUID field_110189_bq = UUID.fromString("49455A49-7EC5-45BA-B886-3B90B23A1718");
+    private static final UUID field_110187_bq = UUID.fromString("B9766B59-9566-4402-BC1F-2EE2A276D836");;
+    
+	private static final AttributeModifier field_110190_br = (new AttributeModifier(field_110187_bq , "Attacking speed boost", 0.25D, 0)).func_111168_a(false);
 	
 	/**
 	 * Add wizard mob and its parameters (damage, speed, break doors, drops, etc)..
 	 */
-        public EntityMobWizard(World par1World) 
-        {
-            super(par1World);
-            //this.texture = "/mods/PabiModBase/textures/skin_wizard.png";
-            //this.moveSpeed = 0.25F;
-            //this.tasks.addTask(4, new EntityAIWander(this, this.moveSpeed));
-            this.tasks.addTask(4, new EntityAIWander(this, 0.65D));
-            this.tasks.addTask(0, new EntityAISwimming(this));
-	        this.tasks.addTask(1, new EntityAIBreakDoor(this));
-	        //this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, this.moveSpeed, false));
-	        this.tasks.addTask(3, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
-	        //this.tasks.addTask(4, new EntityAIWander(this, this.moveSpeed));
-	        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
-	        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityVillager.class, 0, true));
-	        this.setCurrentItemOrArmor(0, new ItemStack(pabimodbase.ThorAxe));
-	        
-	        
-        }
+    public EntityMobWizard(World par1World)
+    {
+        super(par1World);
+        this.getNavigator().setBreakDoors(true);
+        this.tasks.addTask(0, new EntityAISwimming(this));
+        this.tasks.addTask(1, new EntityAIBreakDoor(this));
+        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
+        this.tasks.addTask(3, new EntityAIAttackOnCollide(this, EntityVillager.class, 1.0D, true));
+        this.tasks.addTask(4, new EntityAIMoveTowardsRestriction(this, 1.0D));
+        this.tasks.addTask(5, new EntityAIMoveThroughVillage(this, 1.0D, false));
+        this.tasks.addTask(6, new EntityAIWander(this, 1.0D));
+        this.tasks.addTask(7, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+        this.tasks.addTask(7, new EntityAILookIdle(this));
+        this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 0, true));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityVillager.class, 0, false));
+    }
         
         public int getAttackStrength(Entity par1Entity)
 	    {
@@ -66,7 +75,7 @@ public class EntityMobWizard extends EntityMob{
         
          public String getTexture()
          {
-        	 return "/mods/pabimodbase/textures/skin_wizard.png";
+        	 return "mods/pabimodbase/textures/entity/skin_wizard.png";
          }
 
         public int getTotalArmorValue()
@@ -161,6 +170,59 @@ public class EntityMobWizard extends EntityMob{
         private int nextThrowTick = 20;
         
        
+        public boolean attackEntityFrom(DamageSource par1DamageSource, float par2)
+        {
+            if (!super.attackEntityFrom(par1DamageSource, par2))
+            {
+                return false;
+            }
+            else
+            {
+                EntityLivingBase entitylivingbase = this.getAttackTarget();
+
+                if (entitylivingbase == null && this.getEntityToAttack() instanceof EntityLivingBase)
+                {
+                    entitylivingbase = (EntityLivingBase)this.getEntityToAttack();
+                }
+
+                if (entitylivingbase == null && par1DamageSource.getEntity() instanceof EntityLivingBase)
+                {
+                    entitylivingbase = (EntityLivingBase)par1DamageSource.getEntity();
+                }
+
+                if (entitylivingbase != null && this.worldObj.difficultySetting >= 3 && (double)this.rand.nextFloat() < this.func_110148_a(field_110186_bp).func_111126_e())
+                {
+                    int i = MathHelper.floor_double(this.posX);
+                    int j = MathHelper.floor_double(this.posY);
+                    int k = MathHelper.floor_double(this.posZ);
+                    EntityMobWizard EntityMobWizard = new EntityMobWizard(this.worldObj);
+
+                    for (int l = 0; l < 50; ++l)
+                    {
+                        int i1 = i + MathHelper.getRandomIntegerInRange(this.rand, 7, 40) * MathHelper.getRandomIntegerInRange(this.rand, -1, 1);
+                        int j1 = j + MathHelper.getRandomIntegerInRange(this.rand, 7, 40) * MathHelper.getRandomIntegerInRange(this.rand, -1, 1);
+                        int k1 = k + MathHelper.getRandomIntegerInRange(this.rand, 7, 40) * MathHelper.getRandomIntegerInRange(this.rand, -1, 1);
+
+                        if (this.worldObj.doesBlockHaveSolidTopSurface(i1, j1 - 1, k1) && this.worldObj.getBlockLightValue(i1, j1, k1) < 10)
+                        {
+                            EntityMobWizard.setPosition((double)i1, (double)j1, (double)k1);
+
+                            if (this.worldObj.checkNoEntityCollision(EntityMobWizard.boundingBox) && this.worldObj.getCollidingBoundingBoxes(EntityMobWizard, EntityMobWizard.boundingBox).isEmpty() && !this.worldObj.isAnyLiquid(EntityMobWizard.boundingBox))
+                            {
+                                this.worldObj.spawnEntityInWorld(EntityMobWizard);
+                                EntityMobWizard.setAttackTarget(entitylivingbase);
+                                EntityMobWizard.func_110161_a((EntityLivingData)null);
+                                this.func_110148_a(field_110186_bp).func_111121_a(new AttributeModifier("Zombie reinforcement caller charge", -0.05000000074505806D, 0));
+                                EntityMobWizard.func_110148_a(field_110186_bp).func_111121_a(new AttributeModifier("Zombie reinforcement callee charge", -0.05000000074505806D, 0));
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                return true;
+            }
+        }
             
             
         

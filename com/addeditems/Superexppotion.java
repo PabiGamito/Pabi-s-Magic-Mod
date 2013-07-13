@@ -27,7 +27,7 @@ public Superexppotion(int par1) {
                 par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
                 if (!par2World.isRemote)
                 {
-                 for (int i = 0; i < 10; ++i) {
+                 for (int i = 0; i < 18; ++i) {
                   par2World.spawnEntityInWorld(new EntityExpBottle(par2World, par3EntityPlayer));
                  }
                 }

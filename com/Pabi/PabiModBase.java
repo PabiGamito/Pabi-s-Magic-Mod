@@ -171,7 +171,7 @@ public class pabimodbase
 		 * Add/register entity mob and custom spawn for mob to game.
 		 */
 		EntityRegistry.registerModEntity(EntityMobWizard.class, "Wizard", 850, this, 100, 1, true);
-		 EntityRegistry.addSpawn(EntityMobWizard.class, 3, 1, 2, EnumCreatureType.monster, BiomeGenBase.forest, BiomeGenBase.mushroomIsland, BiomeGenBase.mushroomIslandShore, BiomeGenBase.plains, BiomeGenBase.river, BiomeGenBase.swampland, BiomeGenBase.forestHills, BiomeGenBase.ocean); //BiomeGenBase.beach, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.jungle, BiomeGenBase.jungleHills, BiomeGenBase.ocean);
+		 EntityRegistry.addSpawn(EntityMobWizard.class, 5, 1, 1, EnumCreatureType.monster, BiomeGenBase.forest, BiomeGenBase.mushroomIsland, BiomeGenBase.mushroomIslandShore, BiomeGenBase.plains, BiomeGenBase.river, BiomeGenBase.swampland, BiomeGenBase.forestHills, BiomeGenBase.ocean); //BiomeGenBase.beach, BiomeGenBase.extremeHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.jungle, BiomeGenBase.jungleHills, BiomeGenBase.ocean);
 		
 		/**
 		* Add customized armor to game
@@ -193,7 +193,7 @@ public class pabimodbase
         LanguageRegistry.instance().addStringLocalization("achievement.SuperIngotA", "en_US", "Super Ore");
         LanguageRegistry.instance().addStringLocalization("achievement.SuperIngotA.desc", "en_US", "Start crafting super stuff!");
 		
-        LanguageRegistry.instance().addStringLocalization("entity.PabiModBase.Wizard.name", "Wizard");
+        LanguageRegistry.instance().addStringLocalization("entity.PabiModBase.Wizard.name", "Super Ghost");
         
         /**
 		 * Add Item Names.

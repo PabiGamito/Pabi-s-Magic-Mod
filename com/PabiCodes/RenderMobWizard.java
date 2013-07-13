@@ -38,10 +38,8 @@ public void doRender(Entity par1Entity, double par2, double par4, double par6, f
     }
 
 	
-
-/*
-	private static final ResourceLocation field_110888_a = new ResourceLocation("PabiModBase:textures/skin_wizard.png");
-	private static final ResourceLocation field_110887_f = new ResourceLocation("PabiModBase:textures/skin_wizard.png");
+	private static final ResourceLocation field_110888_a = new ResourceLocation("pabimodbase:textures/skin_wizard.png");
+	private static final ResourceLocation field_110887_f = new ResourceLocation("pabimodbase:textures/skin_wizard.png");
 	
 	protected ResourceLocation func_110886_a(EntityMobWizard par1EntityMobWizard)
 	{
@@ -51,5 +49,5 @@ public void doRender(Entity par1Entity, double par2, double par4, double par6, f
 	{
 	return this.func_110886_a((EntityMobWizard) par1Entity);
 	}
-*/
+
 }
